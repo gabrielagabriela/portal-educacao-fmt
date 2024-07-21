@@ -1,0 +1,47 @@
+.disciplinas {
+  .cursos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .curso {
+      .botao {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+
+  .disciplina-curso {
+    margin-top: 20px;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      margin: 10px 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        background: #f1f1f1;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    }
+  }
+}

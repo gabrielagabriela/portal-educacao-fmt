@@ -1,1 +1,17 @@
-<p>disciplinas works!</p>
+<div class="disciplinas">
+  <div class="cursos">
+    <div class="curso" *ngFor="let curso of cursos">
+      <button class="botao" (click)="selecionarCurso(curso)">{{ curso.nome }}</button>
+    </div>
+  </div>
+
+  <div class="disciplina-curso" *ngIf="cursoSelecionado">
+    <h3>Nome: {{ cursoSelecionado.nome }}</h3>
+    <div *ngFor="let item of cursoSelecionado.disciplinas">
+      <h4>Semestre: {{ item.semestre }}</h4>
+      <ul>
+        <li *ngFor="let disciplina of item.disciplinas">{{ disciplina }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
