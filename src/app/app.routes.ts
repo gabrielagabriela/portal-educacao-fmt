@@ -8,22 +8,26 @@ import { DisciplinasComponent } from './disciplinas/disciplinas.component';
 export const routes: Routes = [
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'alunos',
-    component: AlunosComponent
+    component: AlunosComponent,
   },
   {
     path: 'cadastro-aluno',
-    component: CadastroAlunoComponent
+    component: CadastroAlunoComponent,
+  },
+  {
+    path: 'cadastro-aluno:id',
+    component: CadastroAlunoComponent,
   },
   {
     path: 'disciplinas',
-    component: DisciplinasComponent
-  }
+    component: DisciplinasComponent,
+  },
 ];

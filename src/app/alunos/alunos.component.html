@@ -1,1 +1,33 @@
-<p>alunos works!</p>
+<div class="alunos">
+
+  <div class="pesquisa">
+    <input type="text" [(ngModel)]="textoPesquisa">
+    <button (click)="pesquisar()">Pesquisar</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Email</th>
+        <th>Curso</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let aluno of listagemUsuarios; let i = index">
+        <td>{{ aluno.nome }}</td>
+        <td>{{ aluno.cpf }}</td>
+        <td>{{ aluno.email }}</td>
+        <td>{{ aluno.curso }}</td>
+        <td class="botao">
+          <button (click)="editar(i)">Editar</button>
+          <button (click)="excluir(i)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>

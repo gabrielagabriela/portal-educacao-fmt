@@ -14,7 +14,7 @@ export class CadastroAlunoComponent implements OnInit {
 
   constructor(private router: Router) {}
   cadastroForm!: FormGroup;
-  alunoCadastrado: any;
+  alunoCadastrado: Array<{nome: string, cpf: string, email: string, celular: string, curso: string}> = []
 
   ngOnInit(): void {
       this.criarForm();
@@ -33,7 +33,7 @@ export class CadastroAlunoComponent implements OnInit {
 
   salvar(){
     if(this.cadastroForm.valid){
-      this.alunoCadastrado = this.cadastroForm.value;
+      this.alunoCadastrado.push(this.cadastroForm.value);
       console.log("Aluno cadastrado:", this.alunoCadastrado);
       this.router.navigate(['/alunos']);
     } else {
