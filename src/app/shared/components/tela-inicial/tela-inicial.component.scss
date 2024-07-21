@@ -1,0 +1,50 @@
+.tela-inicial {
+  padding: 20px;
+  background-color: #f8f9fa; 
+  font-family: Arial, sans-serif;
+
+  .sessao {
+    margin-bottom: 40px;
+
+    h2 {
+      margin-bottom: 20px;
+      color: #1f3a93; 
+      font-size: 24px;
+      border-bottom: 2px solid #1f3a93;
+      padding-bottom: 10px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      .card {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        flex: 1 1 calc(33.333% - 20px);
+        box-sizing: border-box;
+        transition: transform 0.2s, box-shadow 0.2s;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        h3 {
+          margin-top: 0;
+          color: #1f3a93; 
+          font-size: 20px;
+        }
+
+        p {
+          margin: 10px 0 0;
+          color: #4a4a4a; 
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
